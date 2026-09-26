@@ -1,0 +1,69 @@
+{
+ "id": "04_five_storey_ZD",
+ "title": "5-storey, 2-bay frame on ZD",
+ "description": "Locked hold-out frame w1_LHS_18248 (sampling wave w1); OpenSees performance class CP; column not TBEC-confined, fck 37.1 MPa, B420C",
+ "source": {
+  "name": "w1_LHS_18248",
+  "set": "locked hold-out of split_lock_seed42.json (never used in training)",
+  "sampling_wave": "w1",
+  "performance_class": "CP",
+  "test_index": 19879
+ },
+ "inputs": {
+  "N_story": 5,
+  "N_bay": 2,
+  "h1": 3.338529153416144,
+  "htyp": 3.0947657078224964,
+  "col_B": 0.5765835867550505,
+  "beam_b": 0.30438636715508066,
+  "beam_h": 0.5634987398868755,
+  "cover": 0.027937338239477152,
+  "phi_long_col_mm": 18.0,
+  "col_n_long": 8,
+  "phi_long_beam_mm": 16.0,
+  "beam_n_long_top": 3,
+  "beam_n_long_bot": 3,
+  "col_phi_etr": 0.008,
+  "col_s_etr": 0.060000000000000005,
+  "col_n_etr_x": 3,
+  "col_n_etr_y": 3,
+  "beam_phi_etr": 0.01,
+  "beam_s_etr": 0.17000000000000004,
+  "fc_MPa": 37.147527708570735,
+  "fy_MPa": 420.0,
+  "G": 34.78298087261916,
+  "Q": 5.063475337745851,
+  "soil_class": "ZD",
+  "bay_lengths": [
+   6.679,
+   6.0826
+  ]
+ },
+ "span_statistics_exact": {
+  "L_mean": 6.3808060593332225,
+  "L_max": 6.679003041060606,
+  "L_min": 6.082609077605838,
+  "W_total": 12.761612118666445
+ },
+ "reference": {
+  "Vy": 485.74277581485825,
+  "delta_y": 0.057029592494932335,
+  "Vmax": 510.75263953896155,
+  "delta_max": 0.5558616927104711,
+  "V_at_dt": 478.2220434928798,
+  "delta_t": 0.16336276951582204,
+  "delta_u": 0.5773474711780305,
+  "T1": 0.6056257417583658
+ },
+ "reference_label": "reference (locked hold-out)",
+ "notebook_prediction": {
+  "Vy": 478.89626080569207,
+  "delta_y": 0.05938386114331661,
+  "Vmax": 503.8072551871185,
+  "delta_max": 0.4796929998675172,
+  "V_at_dt": 475.4581674630426,
+  "delta_t": 0.16715273406554945,
+  "delta_u": 0.5870623647560115,
+  "T1": 0.613956525486304
+ }
+}

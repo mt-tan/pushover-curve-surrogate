@@ -1,0 +1,47 @@
+[00:37:38] split hash 41d2d9edbe9d  feature hash d9e2d1b1
+[00:37:40] hashes of the source files computed
+[00:37:40] copied reg_final_Vy.cbm  sha256 02f67bc2046d25ab...
+[00:37:40] copied reg_final_delta_y.cbm  sha256 03af1734b932c220...
+[00:37:40] copied reg_final_Vmax.cbm  sha256 d1d3c0ec1b74ceda...
+[00:37:40] copied reg_final_delta_max.cbm  sha256 24723b47fdb6a9e4...
+[00:37:41] copied reg_final_V_at_dt.cbm  sha256 a18512ca518c19de...
+[00:37:41] copied reg_final_delta_t.cbm  sha256 164793f3f673c734...
+[00:37:41] copied reg_final_delta_u.cbm  sha256 b1c7a3ddadafc388...
+[00:37:41] copied reg_final_T1.cbm  sha256 304658ebd904cdbd...
+[00:37:41] feature_spec.json and target_spec.json written
+[00:37:41] curve intersection: train 51107 | test 21904
+[00:38:05]   station  1/19 (s = 0.05) fitted in 23 s
+[00:38:27]   station  2/19 (s = 0.10) fitted in 23 s
+[00:38:50]   station  3/19 (s = 0.15) fitted in 23 s
+[00:39:15]   station  4/19 (s = 0.20) fitted in 24 s
+[00:39:37]   station  5/19 (s = 0.25) fitted in 23 s
+[00:40:01]   station  6/19 (s = 0.30) fitted in 24 s
+[00:40:26]   station  7/19 (s = 0.35) fitted in 25 s
+[00:40:49]   station  8/19 (s = 0.40) fitted in 23 s
+[00:41:11]   station  9/19 (s = 0.45) fitted in 22 s
+[00:41:33]   station 10/19 (s = 0.50) fitted in 22 s
+[00:41:55]   station 11/19 (s = 0.55) fitted in 22 s
+[00:42:18]   station 12/19 (s = 0.60) fitted in 22 s
+[00:42:40]   station 13/19 (s = 0.65) fitted in 22 s
+[00:43:02]   station 14/19 (s = 0.70) fitted in 22 s
+[00:43:24]   station 15/19 (s = 0.75) fitted in 22 s
+[00:43:46]   station 16/19 (s = 0.80) fitted in 22 s
+[00:44:09]   station 17/19 (s = 0.85) fitted in 23 s
+[00:44:31]   station 18/19 (s = 0.90) fitted in 23 s
+[00:44:54]   station 19/19 (s = 0.95) fitted in 22 s
+[00:45:16]   PCA coefficient 1/5 fitted in 23 s
+[00:45:39]   PCA coefficient 2/5 fitted in 23 s
+[00:46:03]   PCA coefficient 3/5 fitted in 23 s
+[00:46:26]   PCA coefficient 4/5 fitted in 23 s
+[00:46:49]   PCA coefficient 5/5 fitted in 23 s
+[00:46:49] B-station: 19 models in 432 s | B-PCA: K = 5 in 116 s
+[00:46:49] vs notebook cache: max|dv| station 0.000e+00, PCA 0.000e+00, mean shape 0.000e+00
+[00:46:51] hold-out comparison (export vs table_curveB_comparison.csv):
+                           Method  Shape MAE [%Vmax] (export)  Phys err median [%Vmax] (export)  Phys err P90 [%Vmax] (export)  Energy MdAPE [%] (export)  Energy R2 (export)  n_models (export)  Shape MAE [%Vmax] (table)  Phys err median [%Vmax] (table)  Phys err P90 [%Vmax] (table)  Energy MdAPE [%] (table)  Energy R2 (table)  n_models (table)
+         A multilinear (baseline)                         NaN                             2.223                          4.513                      5.952              0.9313                  0                        NaN                            2.223                         4.513                     5.952             0.9313                 0
+B-mean-shape (baseline, no model)                       2.699                             2.163                          4.358                      6.507              0.9301                  0                      2.699                            2.163                         4.358                     6.507             0.9301                 0
+        B-station (19 regressors)                       1.287                             1.293                          3.012                      5.873              0.9312                 19                      1.287                            1.293                         3.012                     5.873             0.9312                19
+           B-PCA (5 coefficients)                       1.407                             1.383                          3.062                      5.888              0.9312                  5                      1.407                            1.383                         3.062                     5.888             0.9312                 5
+[00:46:51] physical-axis median difference: station 0.000, PCA 0.000 %Vmax (tolerance 0.02) -> VERIFIED
+[00:46:52] bundle loads: 8 regressors, 19 stations, 5 PCA models; export finished in 553 s
+export exit code 0

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.spec
+
+# data and development material of the article (not distributed with the application)
+*.parquet
+*.pkl
+*.ipynb
+.ipynb_checkpoints/
+catboost_info/
+outputs/
+modules/
+qa/
+manuscript/
+chatgpt-reports/
+app_reference/
+figs_manual/
+tables_R7/
+
+# classification (performance-level) tool: not part of this repository
+app_cascade.py
+core/classifier.py
+ui/verdict_panel.py
+assets/models/clf_final.cbm
+assets/models/classifier_spec.json
+tests/test_verdict_parity.py
+tests/test_app_cascade_smoke.py
+docs/app_cascade_*
+
+# development-only scripts of the model export
+export_models.py
+make_presets.py
+build_windows.bat
+
+# outputs written by the application and the tests
+*.xlsx
+!assets/examples/batch_input_template.xlsx
+report_*.pdf

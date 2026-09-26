@@ -1,0 +1,945 @@
+{
+ "n_features": 45,
+ "feature_hash_md5_8": "d9e2d1b1",
+ "raw_inputs": [
+  "N_story",
+  "N_bay",
+  "bay_lengths",
+  "h1",
+  "htyp",
+  "col_B",
+  "beam_b",
+  "beam_h",
+  "cover",
+  "phi_long_col_mm",
+  "col_n_long",
+  "phi_long_beam_mm",
+  "beam_n_long_top",
+  "beam_n_long_bot",
+  "col_phi_etr",
+  "col_s_etr",
+  "col_n_etr_x",
+  "col_n_etr_y",
+  "beam_phi_etr",
+  "beam_s_etr",
+  "fc_MPa",
+  "fy_MPa",
+  "G",
+  "Q",
+  "soil_class"
+ ],
+ "soil_ordinal": {
+  "ZA": 0,
+  "ZB": 1,
+  "ZC": 2,
+  "ZD": 3,
+  "ZE": 4
+ },
+ "source": "notebook cell 4 INPUT_COLS (D-63 sealed); ranges from the training pool of split_lock_seed42.json (51,116 of 73,023 clean rows, locked hold-out excluded), same statistics as table_realised_marginals.csv",
+ "envelope_rows": {
+  "training_pool": 51116,
+  "hold_out_excluded": 21907
+ },
+ "features": [
+  {
+   "name": "N_story",
+   "position": 0,
+   "display": "$N_{\\mathrm{story}}$",
+   "display_unicode": "Nstory",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Number of stories",
+   "category": "Geometry",
+   "realised": {
+    "min": 2.0,
+    "1%": 2.0,
+    "50%": 4.0,
+    "99%": 6.0,
+    "max": 6.0,
+    "mean": 4.34099,
+    "std": 1.35554
+   }
+  },
+  {
+   "name": "N_bay",
+   "position": 1,
+   "display": "$N_{\\mathrm{bay}}$",
+   "display_unicode": "Nbay",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Number of bays",
+   "category": "Geometry",
+   "realised": {
+    "min": 2.0,
+    "1%": 2.0,
+    "50%": 4.0,
+    "99%": 6.0,
+    "max": 6.0,
+    "mean": 4.0412,
+    "std": 1.41577
+   }
+  },
+  {
+   "name": "L_mean",
+   "position": 2,
+   "display": "$L_{\\mathrm{mean}}$",
+   "display_unicode": "Lmean",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Mean bay length (=W_total/N_bay)",
+   "category": "Geometry",
+   "realised": {
+    "min": 3.0,
+    "1%": 3.08272,
+    "50%": 5.50868,
+    "99%": 7.92827,
+    "max": 8.0,
+    "mean": 5.51772,
+    "std": 1.36889
+   }
+  },
+  {
+   "name": "L_max",
+   "position": 3,
+   "display": "$L_{\\mathrm{max}}$",
+   "display_unicode": "Lmax",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Maximum bay length",
+   "category": "Geometry",
+   "realised": {
+    "min": 3.0,
+    "1%": 3.17023,
+    "50%": 5.8757,
+    "99%": 8.0,
+    "max": 8.0,
+    "mean": 5.86452,
+    "std": 1.43623
+   }
+  },
+  {
+   "name": "L_min",
+   "position": 4,
+   "display": "$L_{\\mathrm{min}}$",
+   "display_unicode": "Lmin",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Minimum bay length",
+   "category": "Geometry",
+   "realised": {
+    "min": 3.0,
+    "1%": 3.0,
+    "50%": 5.12258,
+    "99%": 7.83429,
+    "max": 8.0,
+    "mean": 5.15851,
+    "std": 1.33084
+   }
+  },
+  {
+   "name": "W_total",
+   "position": 5,
+   "display": "$\\Sigma L_i$",
+   "display_unicode": "\u03a3Li",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Total frame width Sigma L_i",
+   "category": "Geometry",
+   "realised": {
+    "min": 6.0,
+    "1%": 6.66096,
+    "50%": 21.01701,
+    "99%": 45.90079,
+    "max": 48.0,
+    "mean": 22.29458,
+    "std": 9.7526
+   }
+  },
+  {
+   "name": "h1",
+   "position": 6,
+   "display": "$h_1$",
+   "display_unicode": "h1",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "First story height",
+   "category": "Geometry",
+   "realised": {
+    "min": 2.7046372388717357,
+    "1%": 2.81097,
+    "50%": 3.56419,
+    "99%": 4.29522,
+    "max": 4.395560649284572,
+    "mean": 3.56009,
+    "std": 0.37469
+   }
+  },
+  {
+   "name": "htyp",
+   "position": 7,
+   "display": "$h_{\\mathrm{typ}}$",
+   "display_unicode": "htyp",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Typical story height",
+   "category": "Geometry",
+   "realised": {
+    "min": 2.700000376031253,
+    "1%": 2.70505,
+    "50%": 2.95273,
+    "99%": 3.19509,
+    "max": 3.199987399870543,
+    "mean": 2.95128,
+    "std": 0.14453
+   }
+  },
+  {
+   "name": "Htot",
+   "position": 8,
+   "display": "$H_{\\mathrm{tot}}$",
+   "display_unicode": "Htot",
+   "unit": "m",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Total height h1+(N_story-1)*htyp",
+   "category": "Geometry",
+   "realised": {
+    "min": 5.422943771765919,
+    "1%": 5.84195,
+    "50%": 13.74484,
+    "99%": 19.89872,
+    "max": 20.387126285253125,
+    "mean": 13.42002,
+    "std": 4.06797
+   }
+  },
+  {
+   "name": "cover",
+   "position": 9,
+   "display": "$c$ (cover)",
+   "display_unicode": "c (cover)",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Clear cover (outside stirrup)",
+   "category": "Section",
+   "realised": {
+    "min": 0.020001894135558574,
+    "1%": 0.02028,
+    "50%": 0.03415,
+    "99%": 0.04967,
+    "max": 0.049999667194440156,
+    "mean": 0.03443,
+    "std": 0.00863
+   }
+  },
+  {
+   "name": "col_B",
+   "position": 10,
+   "display": "$b_{\\mathrm{col}}$",
+   "display_unicode": "bcol",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Column width",
+   "category": "Section",
+   "realised": {
+    "min": 0.400021919553086,
+    "1%": 0.41469,
+    "50%": 0.62298,
+    "99%": 0.9867,
+    "max": 0.9999625488667614,
+    "mean": 0.63552,
+    "std": 0.15399
+   }
+  },
+  {
+   "name": "col_H",
+   "position": 11,
+   "display": "$h_{\\mathrm{col}}$",
+   "display_unicode": "hcol",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Column depth",
+   "category": "Section",
+   "realised": {
+    "min": 0.400021919553086,
+    "1%": 0.41469,
+    "50%": 0.62298,
+    "99%": 0.9867,
+    "max": 0.9999625488667614,
+    "mean": 0.63552,
+    "std": 0.15399
+   }
+  },
+  {
+   "name": "beam_b",
+   "position": 12,
+   "display": "$b_{\\mathrm{beam}}$",
+   "display_unicode": "bbeam",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Beam width",
+   "category": "Section",
+   "realised": {
+    "min": 0.25000066123616066,
+    "1%": 0.25114,
+    "50%": 0.3108,
+    "99%": 0.39788,
+    "max": 0.3999994855062021,
+    "mean": 0.31582,
+    "std": 0.04232
+   }
+  },
+  {
+   "name": "beam_h",
+   "position": 13,
+   "display": "$h_{\\mathrm{beam}}$",
+   "display_unicode": "hbeam",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Beam depth",
+   "category": "Section",
+   "realised": {
+    "min": 0.4000012195622645,
+    "1%": 0.40132,
+    "50%": 0.55607,
+    "99%": 0.78202,
+    "max": 0.7999946385802077,
+    "mean": 0.55783,
+    "std": 0.10397
+   }
+  },
+  {
+   "name": "rho_col",
+   "position": 14,
+   "display": "$\\rho_{\\mathrm{col}}$",
+   "display_unicode": "\u03c1col",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Column longitudinal ratio",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 0.010001533773035622,
+    "1%": 0.01023,
+    "50%": 0.01952,
+    "99%": 0.03868,
+    "max": 0.0399990161154418,
+    "mean": 0.02086,
+    "std": 0.00744
+   }
+  },
+  {
+   "name": "rho_beam_top",
+   "position": 15,
+   "display": "$\\rho_{\\mathrm{beam}}^{\\mathrm{top}}$",
+   "display_unicode": "\u03c1beam,top",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Beam top steel ratio",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 0.0035000179066256177,
+    "1%": 0.00352,
+    "50%": 0.00477,
+    "99%": 0.01063,
+    "max": 0.014610118173912499,
+    "mean": 0.00525,
+    "std": 0.0016
+   }
+  },
+  {
+   "name": "rho_beam_bot",
+   "position": 16,
+   "display": "$\\rho_{\\mathrm{beam}}^{\\mathrm{bot}}$",
+   "display_unicode": "\u03c1beam,bot",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Beam bottom steel ratio",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 0.0033000830541047984,
+    "1%": 0.00333,
+    "50%": 0.0042,
+    "99%": 0.00893,
+    "max": 0.014610118173912499,
+    "mean": 0.00458,
+    "std": 0.0012
+   }
+  },
+  {
+   "name": "phi_long_col_mm",
+   "position": 17,
+   "display": "$\\phi_{\\mathrm{l,col}}$",
+   "display_unicode": "\u03c6l,col",
+   "unit": "mm",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Column bar diameter",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 14.0,
+    "1%": 14.0,
+    "50%": 18.0,
+    "99%": 22.0,
+    "max": 22.0,
+    "mean": 18.09124,
+    "std": 2.8205
+   }
+  },
+  {
+   "name": "phi_long_beam_mm",
+   "position": 18,
+   "display": "$\\phi_{\\mathrm{l,beam}}$",
+   "display_unicode": "\u03c6l,beam",
+   "unit": "mm",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Beam bar diameter",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 12.0,
+    "1%": 12.0,
+    "50%": 16.0,
+    "99%": 20.0,
+    "max": 20.0,
+    "mean": 16.04308,
+    "std": 2.73665
+   }
+  },
+  {
+   "name": "col_n_long",
+   "position": 19,
+   "display": "$n_{\\mathrm{l,col}}$",
+   "display_unicode": "nl,col",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Column bar count",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 3.0,
+    "1%": 3.0,
+    "50%": 9.0,
+    "99%": 20.0,
+    "max": 24.0,
+    "mean": 9.40739,
+    "std": 3.98396
+   }
+  },
+  {
+   "name": "beam_n_long_top",
+   "position": 20,
+   "display": "$n_{\\mathrm{l,beam}}^{\\mathrm{top}}$",
+   "display_unicode": "nl,beam,top",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Beam top bar count",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 2.0,
+    "1%": 2.0,
+    "50%": 5.0,
+    "99%": 8.0,
+    "max": 9.0,
+    "mean": 4.65553,
+    "std": 1.47751
+   }
+  },
+  {
+   "name": "beam_n_long_bot",
+   "position": 21,
+   "display": "$n_{\\mathrm{l,beam}}^{\\mathrm{bot}}$",
+   "display_unicode": "nl,beam,bot",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Beam bottom bar count",
+   "category": "Longitudinal",
+   "realised": {
+    "min": 2.0,
+    "1%": 2.0,
+    "50%": 4.0,
+    "99%": 8.0,
+    "max": 9.0,
+    "mean": 4.14045,
+    "std": 1.42879
+   }
+  },
+  {
+   "name": "col_phi_etr",
+   "position": 22,
+   "display": "$\\phi_{\\mathrm{w,col}}$",
+   "display_unicode": "\u03c6w,col",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Column stirrup diameter",
+   "category": "Transverse (raw)",
+   "realised": {
+    "min": 0.008,
+    "1%": 0.008,
+    "50%": 0.01,
+    "99%": 0.01,
+    "max": 0.01,
+    "mean": 0.00901,
+    "std": 0.001
+   }
+  },
+  {
+   "name": "col_s_etr",
+   "position": 23,
+   "display": "$s_{\\mathrm{col}}$",
+   "display_unicode": "scol",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Column stirrup spacing (confined zone)",
+   "category": "Transverse (raw)",
+   "realised": {
+    "min": 0.05,
+    "1%": 0.05,
+    "50%": 0.12,
+    "99%": 0.2,
+    "max": 0.2,
+    "mean": 0.12404,
+    "std": 0.04612
+   }
+  },
+  {
+   "name": "col_n_etr_x",
+   "position": 24,
+   "display": "$n_{\\mathrm{w,col}}^{x}$",
+   "display_unicode": "nw,col,x",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Column tie legs, x",
+   "category": "Transverse (raw)",
+   "realised": {
+    "min": 2.0,
+    "1%": 2.0,
+    "50%": 3.0,
+    "99%": 4.0,
+    "max": 4.0,
+    "mean": 2.93881,
+    "std": 0.82208
+   }
+  },
+  {
+   "name": "col_n_etr_y",
+   "position": 25,
+   "display": "$n_{\\mathrm{w,col}}^{y}$",
+   "display_unicode": "nw,col,y",
+   "unit": "-",
+   "kind": "raw",
+   "dtype": "int",
+   "description": "Column tie legs, y",
+   "category": "Transverse (raw)",
+   "realised": {
+    "min": 2.0,
+    "1%": 2.0,
+    "50%": 3.0,
+    "99%": 4.0,
+    "max": 4.0,
+    "mean": 2.93881,
+    "std": 0.82208
+   }
+  },
+  {
+   "name": "beam_phi_etr",
+   "position": 26,
+   "display": "$\\phi_{\\mathrm{w,beam}}$",
+   "display_unicode": "\u03c6w,beam",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Beam stirrup diameter",
+   "category": "Transverse (raw)",
+   "realised": {
+    "min": 0.008,
+    "1%": 0.008,
+    "50%": 0.008,
+    "99%": 0.01,
+    "max": 0.01,
+    "mean": 0.00899,
+    "std": 0.001
+   }
+  },
+  {
+   "name": "beam_s_etr",
+   "position": 27,
+   "display": "$s_{\\mathrm{beam}}$",
+   "display_unicode": "sbeam",
+   "unit": "m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Beam stirrup spacing (confined zone)",
+   "category": "Transverse (raw)",
+   "realised": {
+    "min": 0.05,
+    "1%": 0.05,
+    "50%": 0.13,
+    "99%": 0.2,
+    "max": 0.2,
+    "mean": 0.12523,
+    "std": 0.0461
+   }
+  },
+  {
+   "name": "rho_sh_col",
+   "position": 28,
+   "display": "$\\rho_{\\mathrm{sh,col}}$",
+   "display_unicode": "\u03c1sh,col",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Column volumetric transverse ratio",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.0005303266076383916,
+    "1%": 0.00079,
+    "50%": 0.00283,
+    "99%": 0.01217,
+    "max": 0.020197359813194586,
+    "mean": 0.0035,
+    "std": 0.00237
+   }
+  },
+  {
+   "name": "rho_sh_beam",
+   "position": 29,
+   "display": "$\\rho_{\\mathrm{sh,beam}}$",
+   "display_unicode": "\u03c1sh,beam",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Beam volumetric transverse ratio",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.0006778050273893073,
+    "1%": 0.00084,
+    "50%": 0.00225,
+    "99%": 0.008,
+    "max": 0.010742997671829287,
+    "mean": 0.00266,
+    "std": 0.00152
+   }
+  },
+  {
+   "name": "rho_s_col",
+   "position": 30,
+   "display": "$\\rho_{\\mathrm{s,col}}$",
+   "display_unicode": "\u03c1s,col",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Column areal transverse ratio",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.001060653215276783,
+    "1%": 0.00158,
+    "50%": 0.00567,
+    "99%": 0.02434,
+    "max": 0.04039471962638917,
+    "mean": 0.00699,
+    "std": 0.00474
+   }
+  },
+  {
+   "name": "rho_s_beam",
+   "position": 31,
+   "display": "$\\rho_{\\mathrm{s,beam}}$",
+   "display_unicode": "\u03c1s,beam",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Beam areal transverse ratio",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.0022239686973229787,
+    "1%": 0.00275,
+    "50%": 0.00674,
+    "99%": 0.0225,
+    "max": 0.03161740777123764,
+    "mean": 0.00795,
+    "std": 0.00431
+   }
+  },
+  {
+   "name": "omega_we_col",
+   "position": 32,
+   "display": "$\\omega_{\\mathrm{we,col}}$",
+   "display_unicode": "\u03c9we,col",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Effective mech. confinement ratio, col (TBEC Eq. 5.4c)",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.00023799171537931487,
+    "1%": 0.00052,
+    "50%": 0.01531,
+    "99%": 0.11536,
+    "max": 0.242661188079002,
+    "mean": 0.02225,
+    "std": 0.02503
+   }
+  },
+  {
+   "name": "omega_we_beam",
+   "position": 33,
+   "display": "$\\omega_{\\mathrm{we,beam}}$",
+   "display_unicode": "\u03c9we,beam",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Effective mech. confinement ratio, beam (TBEC Eq. 5.4c)",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.0,
+    "1%": 0.0,
+    "50%": 0.00202,
+    "99%": 0.01818,
+    "max": 0.03439867172430196,
+    "mean": 0.0032,
+    "std": 0.00383
+   }
+  },
+  {
+   "name": "alpha_se_col",
+   "position": 34,
+   "display": "$\\alpha_{\\mathrm{se,col}}$",
+   "display_unicode": "\u03b1se,col",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Confinement effectiveness, col (TBEC Eq. 5.4d)",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.03760439994207158,
+    "1%": 0.04775,
+    "50%": 0.51415,
+    "99%": 0.73239,
+    "max": 0.750454241963673,
+    "mean": 0.3958,
+    "std": 0.25263
+   }
+  },
+  {
+   "name": "alpha_se_beam",
+   "position": 35,
+   "display": "$\\alpha_{\\mathrm{se,beam}}$",
+   "display_unicode": "\u03b1se,beam",
+   "unit": "-",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Confinement effectiveness, beam (TBEC Eq. 5.4d)",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 0.0,
+    "1%": 0.0,
+    "50%": 0.07913,
+    "99%": 0.17699,
+    "max": 0.21292075648330072,
+    "mean": 0.07359,
+    "std": 0.05066
+   }
+  },
+  {
+   "name": "fcc_col_MPa",
+   "position": 36,
+   "display": "$f_{\\mathrm{cc,col}}$",
+   "display_unicode": "fcc,col",
+   "unit": "MPa",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Confined strength, col (Mander)",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 26.507227707366198,
+    "1%": 28.29237,
+    "50%": 38.93625,
+    "99%": 58.20416,
+    "max": 75.9453027952377,
+    "mean": 39.43929,
+    "std": 6.53574
+   }
+  },
+  {
+   "name": "fcc_beam_MPa",
+   "position": 37,
+   "display": "$f_{\\mathrm{cc,beam}}$",
+   "display_unicode": "fcc,beam",
+   "unit": "MPa",
+   "kind": "derived",
+   "dtype": "float",
+   "description": "Confined strength, beam (Mander)",
+   "category": "Confinement mech.",
+   "realised": {
+    "min": 25.001823405550684,
+    "1%": 26.09232,
+    "50%": 34.66248,
+    "99%": 46.88947,
+    "max": 56.4523990096658,
+    "mean": 34.89048,
+    "std": 4.97335
+   }
+  },
+  {
+   "name": "fc_MPa",
+   "position": 38,
+   "display": "$f_{\\mathrm{ck}}$",
+   "display_unicode": "fck",
+   "unit": "MPa",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Characteristic concrete strength",
+   "category": "Material",
+   "realised": {
+    "min": 25.000278594076512,
+    "1%": 25.12332,
+    "50%": 31.88727,
+    "99%": 39.82091,
+    "max": 39.999824527535495,
+    "mean": 32.11124,
+    "std": 4.32487
+   }
+  },
+  {
+   "name": "fy_MPa",
+   "position": 39,
+   "display": "$f_y$",
+   "display_unicode": "fy",
+   "unit": "MPa",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Steel yield strength (420/500)",
+   "category": "Material",
+   "realised": {
+    "min": 420.0,
+    "1%": 420.0,
+    "50%": 500.0,
+    "99%": 500.0,
+    "max": 500.0,
+    "mean": 460.17216,
+    "std": 40.00002
+   }
+  },
+  {
+   "name": "G",
+   "position": 40,
+   "display": "$G$",
+   "display_unicode": "G",
+   "unit": "kN/m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Dead line load",
+   "category": "Load",
+   "realised": {
+    "min": 10.000037843294162,
+    "1%": 10.52403,
+    "50%": 29.30085,
+    "99%": 39.81971,
+    "max": 39.99996614437855,
+    "mean": 27.93051,
+    "std": 8.35509
+   }
+  },
+  {
+   "name": "Q",
+   "position": 41,
+   "display": "$Q$",
+   "display_unicode": "Q",
+   "unit": "kN/m",
+   "kind": "raw",
+   "dtype": "float",
+   "description": "Live line load",
+   "category": "Load",
+   "realised": {
+    "min": 5.0001010739486285,
+    "1%": 5.16425,
+    "50%": 12.74996,
+    "99%": 19.86046,
+    "max": 19.99989418349028,
+    "mean": 12.66377,
+    "std": 4.31205
+   }
+  },
+  {
+   "name": "soil_ord",
+   "position": 42,
+   "display": "Soil class",
+   "display_unicode": "Soil class",
+   "unit": "-",
+   "kind": "ordinal",
+   "dtype": "int",
+   "description": "Soil class ordinal ZA=0..ZE=4",
+   "category": "Site",
+   "realised": {
+    "min": 0.0,
+    "1%": 0.0,
+    "50%": 3.0,
+    "99%": 4.0,
+    "max": 4.0,
+    "mean": 2.73388,
+    "std": 1.34772
+   }
+  },
+  {
+   "name": "col_is_tbdy_confined",
+   "position": 43,
+   "display": "TBEC conf. (col)",
+   "display_unicode": "TBEC conf. (col)",
+   "unit": "0/1",
+   "kind": "flag",
+   "dtype": "flag",
+   "description": "Column satisfies TBEC confinement limits",
+   "category": "Compliance flag",
+   "realised": {
+    "min": 0.0,
+    "1%": 0.0,
+    "50%": 0.0,
+    "99%": 1.0,
+    "max": 1.0,
+    "mean": 0.10623,
+    "std": 0.30813
+   }
+  },
+  {
+   "name": "beam_is_tbdy_confined",
+   "position": 44,
+   "display": "TBEC conf. (beam)",
+   "display_unicode": "TBEC conf. (beam)",
+   "unit": "0/1",
+   "kind": "flag",
+   "dtype": "flag",
+   "description": "Beam satisfies TBEC confinement limits",
+   "category": "Compliance flag",
+   "realised": {
+    "min": 0.0,
+    "1%": 0.0,
+    "50%": 0.0,
+    "99%": 1.0,
+    "max": 1.0,
+    "mean": 0.43139,
+    "std": 0.49528
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "order": [
+  "Vy",
+  "delta_y",
+  "Vmax",
+  "delta_max",
+  "V_at_dt",
+  "delta_t",
+  "delta_u",
+  "T1"
+ ],
+ "inverse_rule": {
+  "log1p": "y = expm1(y_t)",
+  "lognormH": "y = exp(y_t) * H_tot",
+  "raw": "y = y_t"
+ },
+ "targets": {
+  "Vy": {
+   "column": "kp_Vy_kN",
+   "transform": "log1p",
+   "tex": "$V_y$",
+   "unit": "kN",
+   "model_file": "reg_final_Vy.cbm"
+  },
+  "delta_y": {
+   "column": "kp_delta_y_m",
+   "transform": "lognormH",
+   "tex": "$\\delta_y$",
+   "unit": "m",
+   "model_file": "reg_final_delta_y.cbm"
+  },
+  "Vmax": {
+   "column": "kp_Vmax_kN",
+   "transform": "log1p",
+   "tex": "$V_{\\mathrm{max}}$",
+   "unit": "kN",
+   "model_file": "reg_final_Vmax.cbm"
+  },
+  "delta_max": {
+   "column": "kp_delta_max_m",
+   "transform": "lognormH",
+   "tex": "$\\delta_{\\mathrm{max}}$",
+   "unit": "m",
+   "model_file": "reg_final_delta_max.cbm"
+  },
+  "V_at_dt": {
+   "column": "kp_V_at_delta_t_kN",
+   "transform": "log1p",
+   "tex": "$V_{\\delta_t}$",
+   "unit": "kN",
+   "model_file": "reg_final_V_at_dt.cbm"
+  },
+  "delta_t": {
+   "column": "kp_delta_t_m",
+   "transform": "lognormH",
+   "tex": "$\\delta_t$",
+   "unit": "m",
+   "model_file": "reg_final_delta_t.cbm"
+  },
+  "delta_u": {
+   "column": "kp_delta_u_m",
+   "transform": "lognormH",
+   "tex": "$\\delta_u$",
+   "unit": "m",
+   "model_file": "reg_final_delta_u.cbm"
+  },
+  "T1": {
+   "column": "kp_T1_s",
+   "transform": "raw",
+   "tex": "$T_1$",
+   "unit": "s",
+   "model_file": "reg_final_T1.cbm"
+  }
+ }
+}

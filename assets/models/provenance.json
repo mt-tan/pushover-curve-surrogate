@@ -1,0 +1,207 @@
+{
+ "tool": "Pushover Curve Surrogate - TBEC 2018",
+ "export_date": "2026-09-20T00:37:39",
+ "dataset": {
+  "file": "dataset_v4_D67b.parquet",
+  "sha256": "d8d9cb4e81aed34f66c4bee0ba2b4c294145a4bfd995a1a2397907d0d732adf9",
+  "n_rows": 77530,
+  "n_clean": 73023,
+  "stamp": "D-67b: alpha_se/omega_we/eps_c recomputed with materials.py (Sigma_ai2 per Tan-Atmaca workbook T27/U27/V27); old values archived as *_preD67; fcc/rho invariants verified"
+ },
+ "curve_matrix": {
+  "file": "curve_matrix_v4.parquet",
+  "sha256": "a3aa1e8137f62ad000e9deebf4676d1a6a0457b7d3a008275b7bd0f6f4862870",
+  "n_rows": 75004
+ },
+ "split_lock": {
+  "file": "split_lock_seed42.json",
+  "sha256": "2f6e14fb138fcc5175d4b2485efad8d86039eb31d9f0cc9452725b94875fc86f",
+  "seed": 42,
+  "test_size": 0.3,
+  "stratify": "perf_int",
+  "n_train": 51116,
+  "n_test": 21907,
+  "split_hash_md5_12": "41d2d9edbe9d"
+ },
+ "optuna": {
+  "file": "optuna_reg_best.json",
+  "sha256": "1a0895638297ac9a5115b7ec07d55b283e46de88638d381a495f072f6e4d9f64"
+ },
+ "regression_state": {
+  "file": "r1_regression_state.pkl",
+  "sha256": "1da904320c38a98645fbca37d8da42353093efb4e9edef366d2001a8a2b63606"
+ },
+ "feature_hash_md5_8": "d9e2d1b1",
+ "packages": {
+  "catboost": "1.2.10",
+  "numpy": "2.4.4",
+  "pandas": "2.3.3",
+  "pyarrow": "24.0.0",
+  "scipy": "1.17.1",
+  "scikit-learn": "1.8.0"
+ },
+ "platform": {
+  "python": "3.13.13",
+  "system": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "cpu_count": 24
+ },
+ "regressors": {
+  "Vy": {
+   "file": "reg_final_Vy.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_Vy.cbm",
+   "sha256": "02f67bc2046d25ab7b32a1e3551a188a70e6fc6abebab35d844cda94675acd33",
+   "size_bytes": 12224680,
+   "transform": "log1p",
+   "catboost_params": {
+    "iterations": 1470,
+    "depth": 9,
+    "learning_rate": 0.03605306237218235,
+    "l2_leaf_reg": 1.0099864116852735,
+    "bagging_temperature": 0.6852840532308294
+   }
+  },
+  "delta_y": {
+   "file": "reg_final_delta_y.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_delta_y.cbm",
+   "sha256": "03af1734b932c22007a4f7274804288e4839e95a53710da6eadb560453f12ae0",
+   "size_bytes": 24759312,
+   "transform": "lognormH",
+   "catboost_params": {
+    "iterations": 1499,
+    "depth": 10,
+    "learning_rate": 0.03943730078266006,
+    "l2_leaf_reg": 1.3766160780697299,
+    "bagging_temperature": 0.5858661045578276
+   }
+  },
+  "Vmax": {
+   "file": "reg_final_Vmax.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_Vmax.cbm",
+   "sha256": "d1d3c0ec1b74ceda0e6a50c4f0b256eef0efa32cf8f91ef01f9226ed1a527027",
+   "size_bytes": 12415184,
+   "transform": "log1p",
+   "catboost_params": {
+    "iterations": 1493,
+    "depth": 9,
+    "learning_rate": 0.035577057685458165,
+    "l2_leaf_reg": 1.0807896261956533,
+    "bagging_temperature": 0.7359307233974028
+   }
+  },
+  "delta_max": {
+   "file": "reg_final_delta_max.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_delta_max.cbm",
+   "sha256": "24723b47fdb6a9e45378c9d2bde9bd88fe4cce1cd3d1b28dd149ee67e177708e",
+   "size_bytes": 12194088,
+   "transform": "lognormH",
+   "catboost_params": {
+    "iterations": 1466,
+    "depth": 9,
+    "learning_rate": 0.03990252459379191,
+    "l2_leaf_reg": 1.7283787888652191,
+    "bagging_temperature": 0.30864494619247845
+   }
+  },
+  "V_at_dt": {
+   "file": "reg_final_V_at_dt.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_V_at_dt.cbm",
+   "sha256": "a18512ca518c19de135e724810a1267ad0ac4cece9eaaa57e5cf6dab445d8528",
+   "size_bytes": 6317536,
+   "transform": "log1p",
+   "catboost_params": {
+    "iterations": 1500,
+    "depth": 8,
+    "learning_rate": 0.07214029912084491,
+    "l2_leaf_reg": 2.140817607292148,
+    "bagging_temperature": 0.5969763351499637
+   }
+  },
+  "delta_t": {
+   "file": "reg_final_delta_t.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_delta_t.cbm",
+   "sha256": "164793f3f673c7345a5cf9a8c161e38f0a8c2ec26c3288720fbcaf6c8b15235b",
+   "size_bytes": 12191192,
+   "transform": "lognormH",
+   "catboost_params": {
+    "iterations": 1466,
+    "depth": 9,
+    "learning_rate": 0.03990252459379191,
+    "l2_leaf_reg": 1.709780319216914,
+    "bagging_temperature": 0.3069884474694722
+   }
+  },
+  "delta_u": {
+   "file": "reg_final_delta_u.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_delta_u.cbm",
+   "sha256": "b1c7a3ddadafc38851f360b9b8e18203fb630ca3d6765c2f6e82bd3bc528cb2d",
+   "size_bytes": 12351280,
+   "transform": "lognormH",
+   "catboost_params": {
+    "iterations": 1485,
+    "depth": 9,
+    "learning_rate": 0.032406559187171745,
+    "l2_leaf_reg": 1.623230057967676,
+    "bagging_temperature": 0.9676577995088893
+   }
+  },
+  "T1": {
+   "file": "reg_final_T1.cbm",
+   "source": "outputs\\ml_v11r_regression_R1\\models\\reg_final_T1.cbm",
+   "sha256": "304658ebd904cdbdb11fd7325bdaf417dfdf55739d5be800c57ea19532fa5d4a",
+   "size_bytes": 24213256,
+   "transform": "raw",
+   "catboost_params": {
+    "iterations": 1466,
+    "depth": 10,
+    "learning_rate": 0.03990252459379191,
+    "l2_leaf_reg": 1.4832142813084699,
+    "bagging_temperature": 0.3222189240170943
+   }
+  }
+ },
+ "shape_layer": {
+  "station_files": {
+   "station_01.cbm": "b7073c0291d9d789f4a2e92d580c31129ac1a8ba2aa7151094fcd984b07ef33d",
+   "station_02.cbm": "5b9f34f742578e0d00eb421d7467b7d528d5298fae33641fc10ac473cfcfbcb1",
+   "station_03.cbm": "2a0ff94d33c9714abe048a57be8aee52cd892f523367b339e85b6e15069195de",
+   "station_04.cbm": "3cd847a49b1997521dc7dc594840e1c22829e55e2dedcc14ff027e996c8f6f63",
+   "station_05.cbm": "dab4d500c351f3378105c9ff92c2d6bf58f63a4b2c6d37766d4d903ee8bf6300",
+   "station_06.cbm": "98d67df2ab2cb90c33a45f02f133e6a3b820fb2a1245e82fc1b26852923de9e4",
+   "station_07.cbm": "4c30949efa1bdecc4f317eda47a4bf31b4a5e11acc899eeffa0e358ad83084d3",
+   "station_08.cbm": "138d68ff609ab5a87171519dddfe13a5ec9e4e841eff7a58755ab9d4596a4889",
+   "station_09.cbm": "4057bad9ceeb497f3fdde997a6781bdd23a0200dd692adf09f00c404d6c89db8",
+   "station_10.cbm": "054e6b26e8173bda4ce1af365d6a1e6dde3fc12a9a50483019b58c80e3f4dd9e",
+   "station_11.cbm": "c08e6383197b04c27e9de48212e6271e517ed8fb1150188cce0e561fd7279406",
+   "station_12.cbm": "aa8193aa91634d7763142fda39da9cf6028179288c8fb136c9d8d56413995fe1",
+   "station_13.cbm": "67bfc30ad458aebe4aef644c120d6e195763c903c22d6adad134d31e3bb9c70d",
+   "station_14.cbm": "6a5002b0fb3559e00024f7a7b9f22d43255f35e42d7cb033aa801e87804818fb",
+   "station_15.cbm": "a160bf5ea3b401f37e19f468d96c3f763a1164256b4a6d1691c35387a169386c",
+   "station_16.cbm": "aa8e1d6bf2b0c05d8aecd021a618697ef27047cfcb95f7f9d340928ad824d627",
+   "station_17.cbm": "d2ac88f0d47be3692bb550a17749ba360fc2a06020199a5d2f99f31b44305ff1",
+   "station_18.cbm": "9fea70a1abf08dfa4c76334baa7ffefed6c5bd086f076122e51a8c11a7e0c3de",
+   "station_19.cbm": "00b417f32abe486c23d038cd4ecd281d5aa37fe4a3e1c7ae1d396cd5a027731d"
+  },
+  "pca_files": {
+   "pca_coef_1.cbm": "49f11f3ca18acdd1180adc42ccdae5fe81574c48fd685db11e64fa1618e4ee40",
+   "pca_coef_2.cbm": "36ef2120bd8a60d8a3ac4d7f362c947913f1c365d8a391fa5fc607832fe9ad77",
+   "pca_coef_3.cbm": "615e0812455a0d4f49aa64b5f2f8b86a7831ee619726259634c4c242120da95c",
+   "pca_coef_4.cbm": "ca11551dc3b8e1719494c19695c30cd8f9573d38ee684581cd43236eb545f924",
+   "pca_coef_5.cbm": "3d2bbf3baad3c34974d3350036b8bc83cbe66b5907e34bcee72a7704c05ee876"
+  },
+  "rows_train": 51107,
+  "rows_test": 21904,
+  "time_station_s": 432.3,
+  "time_pca_s": 115.7,
+  "verified": true,
+  "phys_median_diff_station": 0.0,
+  "phys_median_diff_pca": 0.0
+ },
+ "export_time_s": 553.2,
+ "feature_spec": {
+  "file": "feature_spec.json",
+  "sha256": "23b8cacbd2ce152486cfad2bb7b2713097aa7bf72fc7ecfca806e80e44b4a2de",
+  "envelope_source": "notebook cell 4 INPUT_COLS (D-63 sealed); ranges from the training pool of split_lock_seed42.json (51,116 of 73,023 clean rows, locked hold-out excluded), same statistics as table_realised_marginals.csv",
+  "written": "2026-09-26T14:13:17"
+ }
+}
